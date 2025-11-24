@@ -82,3 +82,7 @@ draft:
 	git commit -m "WIP" --allow-empty
 	git push -u origin $(branch)
 	hub compare
+
+.PHONY: live
+live:
+	sh ./bin/live_preview.sh

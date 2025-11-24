@@ -159,3 +159,13 @@
 
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{4}
+
+% ページ番号を「1/5」形式にする
+\RequirePackage{lastpage} % 総ページ数を取得
+\RequirePackage{fancyhdr} % ページヘッダー・フッターのカスタマイズ
+
+\pagestyle{fancy}
+\fancyhf{} % ヘッダー・フッターをクリア
+\fancyfoot[R]{\thepage/\pageref{LastPage}} % 右下にページ番号
+\renewcommand{\headrulewidth}{0pt} % ヘッダーの線を消す
+\renewcommand{\footrulewidth}{0pt} % フッターの線を消す

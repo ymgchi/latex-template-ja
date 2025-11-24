@@ -1,74 +1,43 @@
-# 日本語論文をLaTeXで書いて、textlintをするためのテンプレート
+# LaTeXレポートテンプレート
 
-[![Test Docker Image](https://github.com/being24/latex-template-ja/actions/workflows/test.yml/badge.svg)](https://github.com/being24/latex-template-ja/actions/workflows/test.yml)
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+大学のレポート作成用LaTeXテンプレートです。Dockerを使用するため、ローカル環境にLaTeXをインストールする必要がありません。
 
+## 特徴
 
-## 機能
+- Dockerベースで環境構築不要
+- リアルタイムプレビュー対応
+- 大学レポートに最適な構成
+- ページ番号は「1/5」形式
+- 図表の正しい配置
+- 参考文献の引用形式対応
 
-* 個人環境にLaTeX workshopを構築せず、dockerでビルドします
-* GitHub Actionsを使用してtextlintを実行します
-* github上にreleaseします
-* レジュメや論文用のテンプレートを持ちますが、あくまで個人の環境用に構築したものです
+## 必要環境
 
-## 環境
+- Docker 18.06以降
+- Ubuntu 18.04 LTS以降 / macOS 10.14以降 / Windows 10以降
 
-* Windows 10 or later
-* macOS 10.14 or later
-* Ubuntu 18.04 LTS or later
+## ドキュメント
 
-Docker環境が必要ですが、clsファイルについては多少弄ればCloud LaTeX等でも使用できます
+- [セットアップ手順](docs/setup.md)
+- [使い方](docs/usage.md)
+- [テンプレート構造](docs/template.md)
+- [コミットルール](docs/commit-rules.md)
 
-* Docker Desktop for Mac 2.1 or later
-* Docker 18.06 or later
-* Docker Desktop for Windows
+## クイックスタート
 
-ghcr.io/being24/latex-docker を使用します  
-ビルド用のdocker imageは[こちらのリポジトリ](https://github.com/being24/latex-docker)を参照してください
+```bash
+git clone https://github.com/your-username/latex-template-ja.git
+cd latex-template-ja
+make live
+```
 
-また、VSCodeが必要です
+PDFファイル名を入力後、`sections/title.tex`と`sections/main_issue.tex`を編集してください。
+保存すると自動でPDFが更新されます。
 
-![demo](example/figures/screenshot.png)
+## ライセンス
 
-## 使い方
+MIT License
 
-使い方やFAQはこの[記事](https://zenn.dev/being/articles/how-to-use-my-latex)にまとめています
+## 元テンプレート
 
-## License
-
-CC0
-
-## Author
-
-Being
-
-## config
-
-VSCode上での設定例は[settings.json](.vscode/settings.json)を参照してください
-
-## テンプレートについて
-
-できるだけ現代的な設定を意識して作成したテンプレートですが、LaTeXに詳しいわけではないので誤りがあった場合は教えていただけると幸いです  
-実際の使用時はexample等必要のないファイルは消してください
-
-jlistingの代わりにmintedを使用し、参考文献はbiblatexを使用します
-(mintedは環境によっては使用できないため、コメントアウトしてあります)
-
-### resume.cls
-
-[resume.cls](/classes/resume.cls)は2段組みのレジュメを作成するためのクラスファイルです  
-使用方法は[例](/example/tex/resume_template.tex)を参照してください
-
-### report.cls
-
-[report.cls](/classes/report.cls)は論文を作成するためのクラスファイルです  
-使用方法は[例](/example/tex/report_template.tex)を参照してください
-
-### .vscode/settings.jsonについて
-
-使用しやすい設定を参考程度ですが上げておきます。  
-VSCodeであればこの設定を読み込んでくれるため、設定を変更する必要はありません
-
-## 参考URL
-
-<https://poyo.hatenablog.jp/entry/2020/12/05/110000>
+このテンプレートは [being24/latex-template-ja](https://github.com/being24/latex-template-ja) をベースに、レポート作成用にカスタマイズしたものです。

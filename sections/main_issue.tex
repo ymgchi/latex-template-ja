@@ -2,33 +2,82 @@
 \documentclass[main]{subfiles}
 
 \begin{document}
-\chapter{本論}
-\section{セクション}
-ここに本論を書く \cite{ref:yao2017integrated} \cite{ref:ugarte1992curling} \cite{ref:nomura2022uwb}．
-\Fig{fig:label}と \Eq{eq:label}はに示すように，hogeである．
 
-\subsection{サブセクション}
+\section{目的}
+この実験・演習の目的を簡潔に記述する。
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[keepaspectratio, width=\linewidth]{figures/dummy.pdf}
-    \caption{caption}
-    \label{fig:label}
-\end{figure}
+\section{方法}
+\subsection{使用機器・環境}
+使用した機器や実験環境について記述する。
 
-\subsubsection{サブサブセクション}
+例：
+\begin{itemize}
+    \item コンピュータ：◯◯社製、型番ABC-123
+    \item ソフトウェア：△△ Ver.1.0
+    \item その他：必要に応じて追加
+\end{itemize}
 
-色は匂へど散りぬるを 我が世誰ぞ常ならむ 有為の奥山今日越えて 浅き夢見じ酔ひもせず
+\subsection{実験・演習の手順}
+どのような手順で実験や演習を行ったかを具体的に記述する。
 
+\section{結果}
+実験や演習で得られた結果を記述する。図表を活用すると分かりやすい。
 
-A quick brown fox jumps over the lazy dog.
+% 図の例（図は下部にタイトル）
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[keepaspectratio, width=0.8\linewidth]{figures/sample.pdf}
+%     \caption{図のタイトルと簡単な説明}
+%     \label{fig:sample}
+% \end{figure}
 
+% 表の例（表は上部にタイトル）
+% \begin{table}[htbp]
+%     \centering
+%     \caption{表のタイトルと簡単な説明}
+%     \label{tab:sample}
+%     \begin{tabular}{|c|c|c|}
+%         \hline
+%         項目1 & 項目2 & 項目3 \\
+%         \hline
+%         データ1 & データ2 & データ3 \\
+%         \hline
+%     \end{tabular}
+% \end{table}
 
-\begin{equation}
-    \left( \int_{0}^\infty \frac{\sin x}{\sqrt {x}} dx \right)^{2}
-    = \sum_{k = 0}^\infty \frac{(2k)!}{2^{2k}(k!)^{2}} \frac{1}{2k + 1}
-    = \prod_{k = 1}^\infty \frac{4k^{2}}{4k^{2} - 1} = \frac{\pi}{2}
-    \label{eq:label}
-\end{equation}
+% 数式の例
+% \begin{equation}
+%     E = mc^2
+%     \label{eq:sample}
+% \end{equation}
+
+% 本文中で図表を参照する例：
+% Fig.~\ref{fig:sample}に示すように、...
+% Table~\ref{tab:sample}より、...
+% Eq.~\ref{eq:sample}から、...
+
+\section{考察}
+結果に対する考察を記述する。以下のような観点から考察するとよい。
+
+\begin{itemize}
+    \item 予想した結果と実際の結果の比較
+    \item 誤差や予想と異なる結果が生じた原因
+    \item 他の方法との比較
+    \item 結果の応用可能性
+    \item 関連する理論についての考察
+\end{itemize}
+
+注意：単なる感想や実験内容の説明、言い訳は考察ではない。
+
+\section{まとめ}
+実験・演習全体を通して分かったことを簡潔にまとめる。
+
+% 参考文献を使用する場合はコメント解除
+% \section{参考文献}
+% \begin{enumerate}
+%     \item 著者名「書籍名」、出版社、発行年
+%     \item 著者名「論文タイトル」、学会誌名、巻号、ページ、発行年
+%     \item URL: https://example.com （アクセス日: 2025年11月25日）
+% \end{enumerate}
 
 \end{document}
